@@ -11,9 +11,9 @@
     y > 0 ? 'py-4 bg-slate-950 border-violet-950' : 'py-6 bg-transparent border-transparent')}>
 
     
-    <h1 class="font-medium">
+    <a class="font-medium text-3xl" href="">
         <b class="font-bold JetBrains Mono text-violet-400">Sudhamshu</b> Suri
-    </h1>
+    </a>
 
 
     <div class="sm:flex items-center gap-4 hidden">
@@ -30,10 +30,7 @@
                 <h4 class="relative z-9">Get in touch</h4>
             </a>
         </button>
-    
 
     </div>
-
-
 
 </header>
