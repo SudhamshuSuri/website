@@ -2,9 +2,6 @@
     export let y;
 
     import {Router, Link, Route} from 'svelte-routing';
-    let tabs = [
-        {name:'SignIn'}
-    ]
 </script>
 
 <header class={"sticky z-[10] top-0 duration-200 px-6 flex items-center justify-between border border-solid " + (
@@ -17,12 +14,14 @@
 
 
     <div class="sm:flex items-center gap-4 hidden">
-        {#each tabs as tab, index}
-        <a href="/Login/" class="duration-200 hover:text-violet-400">
-            <p>{tab.name}</p>
+        <a href="/SignIn/" class="duration-200 hover:text-violet-400">
+            <p>Sign In</p>
         </a>
-        {/each}
 
+        <a href="/SignUp" class="duration-200 hover:text-violet-400">
+            <p>Sign Up</p>
+        </a>
+        
 
         <button class="blueShadow relative overflow-hidden px-5 py-2 group rounded-full bg-white text-slate-950">
             <div class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover:translate-x-full z-0 duration-200"/>
