@@ -1,7 +1,4 @@
 <script>
-  import Header from '../components/Header.svelte';
-  import Footer from '../components/Footer.svelte';
-
   let email = '';
   let password = '';
   let errorMessage = '';
@@ -11,7 +8,6 @@
   };
 </script>
 
-<Header />
 
 <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
   <div class="w-full max-w-md space-y-8">
@@ -48,5 +44,4 @@
     </div>
   </div>
 </div>
-
-<Footer />
+  

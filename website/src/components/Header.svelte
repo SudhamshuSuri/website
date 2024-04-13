@@ -1,9 +1,9 @@
 <script>
     export let y;
 
+    import {Router, Link, Route} from 'svelte-routing';
     let tabs = [
-        {name:'Projects', link:'#projects'},
-        {name:'About Me', link:'#about'}
+        {name:'SignIn'}
     ]
 </script>
 
@@ -11,14 +11,14 @@
     y > 0 ? 'py-4 bg-slate-950 border-violet-950' : 'py-6 bg-transparent border-transparent')}>
 
     
-    <a class="font-medium text-3xl" href="">
+    <a class="font-medium text-3xl" href="/">
         <b class="font-bold JetBrains Mono text-violet-400">Sudhamshu</b> Suri
     </a>
 
 
     <div class="sm:flex items-center gap-4 hidden">
         {#each tabs as tab, index}
-        <a href="{tab.link}" class="duration-200 hover:text-violet-400">
+        <a href="/Login/" class="duration-200 hover:text-violet-400">
             <p>{tab.name}</p>
         </a>
         {/each}
