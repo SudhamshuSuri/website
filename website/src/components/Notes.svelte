@@ -1,6 +1,6 @@
 <!-- src/components/Notes.svelte -->
 <script>
-    import { surreal } from '../lib/api.js';
+    import { surreal } from '../lib/surreal.js';
     import { onMount } from 'svelte';
 
     let notes = [];

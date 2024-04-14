@@ -3,12 +3,19 @@
   let password = '';
   let errorMessage = '';
 
+  import {surreal} from '/src/lib/surreal.js';
+
   async function handleFormSubmit(event) {
     event.preventDefault();
     try {
-      const result = await surreal.query(`
-        signin ${email} ${password}
-      `);
+      const result = await surreal.signin({
+        NS: 'test',
+	      DB: 'test',
+	      SC: 'user',
+
+	      email: email,
+	      password: password,
+      })
 
       // handle successful authentication
       console.log(result);

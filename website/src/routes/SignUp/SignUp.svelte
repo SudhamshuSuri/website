@@ -3,11 +3,34 @@
   let password = '';
   let confirmPassword = '';
   let errorMessage = '';
+  import { surreal } from '/src/lib/surreal.js';
 
-  const handleFormSubmit = (event) => {
-    event.preventDefault();
-    // Handle form submission logic here
-  };
+  const handleFormSubmit = async (event) => {
+  event.preventDefault();
+
+  if (password !== confirmPassword) {
+    errorMessage = 'Passwords do not match.';
+    return;
+  }
+
+  try {
+    surreal.signup({
+      NS:'test',
+      DB: 'test',
+      SC: 'user',
+      
+      email: email,
+      password: password,
+    })
+    // Handle successful sign up
+    console.log('User signed up successfully.');
+  } catch (error) {
+    // Handle sign up error
+    errorMessage = error.message;
+    console.error(error);
+  }
+};
+
 </script>
 
 <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-transparent">
