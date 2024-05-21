@@ -3,7 +3,7 @@
   let password = '';
   let confirmPassword = '';
   let errorMessage = '';
-  import { surreal } from '/src/lib/surreal.js';
+  import { surreal } from '/src/lib/main.js';
 
   const handleFormSubmit = async (event) => {
   event.preventDefault();

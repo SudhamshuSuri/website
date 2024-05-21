@@ -3,27 +3,8 @@
   let password = '';
   let errorMessage = '';
 
-  import {surreal} from '/src/lib/surreal.js';
+  import SignIn from '../src/+server.js';
 
-  async function handleFormSubmit(event) {
-    event.preventDefault();
-    try {
-      const result = await surreal.signin({
-        NS: 'test',
-	      DB: 'test',
-	      SC: 'user',
-
-	      email: email,
-	      password: password,
-      })
-
-      // handle successful authentication
-      console.log(result);
-    } catch (error) {
-      // handle authentication error
-      console.error(error);
-    }
-  };
 </script>
 
 <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-transparent">
